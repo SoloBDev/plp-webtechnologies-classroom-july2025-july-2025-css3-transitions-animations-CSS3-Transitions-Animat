@@ -1,0 +1,578 @@
+/* ============================================
+   GLOBAL STYLES & RESET
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   TYPOGRAPHY & LAYOUT
+   ============================================ */
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #4a5568;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #667eea;
+    font-weight: 300;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #4a5568;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+/* ============================================
+   PART 1: CSS3 ANIMATIONS
+   ============================================ */
+
+.animation-demo {
+    margin-bottom: 40px;
+}
+
+.animation-demo h3 {
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+/* Button Styles with Hover Animations */
+.btn {
+    padding: 12px 24px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #667eea;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Button Animation Effects */
+.btn-glow:hover {
+    box-shadow: 0 0 20px #667eea, 0 0 40px #667eea;
+    background: #764ba2;
+}
+
+.btn-bounce:hover {
+    animation: bounce 0.5s ease;
+}
+
+.btn-slide:hover {
+    animation: slideRight 0.3s ease forwards;
+}
+
+.btn-rotate:hover {
+    animation: rotate 0.5s ease;
+}
+
+/* Continuous Animations */
+.continuous-animations {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pulse-box, .slide-box, .rotate-box, .color-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.pulse-box {
+    background: #48bb78;
+    animation: pulse 2s infinite;
+}
+
+.slide-box {
+    background: #ed8936;
+    animation: slide 3s infinite alternate;
+}
+
+.rotate-box {
+    background: #4299e1;
+    animation: rotateContinuous 4s infinite linear;
+}
+
+.color-box {
+    background: #9f7aea;
+    animation: colorChange 5s infinite alternate;
+}
+
+/* Transform Animations */
+.transform-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.transform-box {
+    width: 120px;
+    height: 120px;
+    background: #667eea;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+}
+
+.scale-box:hover {
+    transform: scale(1.2);
+}
+
+.skew-box:hover {
+    transform: skew(10deg, 5deg);
+}
+
+.translate-box:hover {
+    transform: translate(20px, -20px);
+}
+
+.rotate3d-box:hover {
+    transform: rotate3d(1, 1, 0, 45deg);
+}
+
+/* ============================================
+   PART 2: FUNCTION DEMO STYLES
+   ============================================ */
+
+.function-demo {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f7fafc;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 150px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.output {
+    margin-top: 15px;
+    padding: 15px;
+    background: #edf2f7;
+    border-radius: 5px;
+    border-left: 4px solid #48bb78;
+    font-family: 'Courier New', monospace;
+    min-height: 50px;
+}
+
+/* ============================================
+   PART 3: INTEGRATION DEMO STYLES
+   ============================================ */
+
+.integration-demo {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f7fafc;
+    border-radius: 10px;
+}
+
+/* Animation Controller */
+.animation-box {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.animation-box.animated {
+    animation: complexAnimation 2s infinite alternate;
+}
+
+/* Card Flip */
+.card-container {
+    perspective: 1000px;
+    width: 200px;
+    height: 250px;
+    margin: 20px auto;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+}
+
+.card-back {
+    background: linear-gradient(45deg, #48bb78, #38a169);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    animation: modalSlideIn 0.5s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Progress Loader */
+.progress-container {
+    width: 100%;
+    height: 30px;
+    background: #e2e8f0;
+    border-radius: 15px;
+    margin: 20px 0;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #48bb78, #38a169);
+    border-radius: 15px;
+    width: 0%;
+    transition: width 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill.animated::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+/* ============================================
+   ANIMATION KEYFRAMES
+   ============================================ */
+
+/* Global Animations */
+@keyframes animate-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: animate-fade-in 1s ease-out;
+}
+
+/* Button Animations */
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    80% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Continuous Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(72, 187, 120, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(72, 187, 120, 0);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(50px);
+    }
+}
+
+@keyframes rotateContinuous {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background: #9f7aea;
+    }
+    25% {
+        background: #ed8936;
+    }
+    50% {
+        background: #48bb78;
+    }
+    75% {
+        background: #4299e1;
+    }
+    100% {
+        background: #e53e3e;
+    }
+}
+
+/* Integration Animations */
+@keyframes complexAnimation {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        border-radius: 10px;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+    }
+    50% {
+        transform: translateY(-50px) rotate(180deg);
+        border-radius: 50%;
+        background: linear-gradient(45deg, #ed8936, #e53e3e);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+        border-radius: 10px;
+        background: linear-gradient(45deg, #48bb78, #4299e1);
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* ============================================
+   FOOTER & RESPONSIVE DESIGN
+   ============================================ */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-top: 40px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .section {
+        padding: 20px;
+    }
+    
+    .continuous-animations,
+    .transform-container {
+        gap: 10px;
+    }
+    
+    .pulse-box, .slide-box, .rotate-box, .color-box {
+        width: 60px;
+        height: 60px;
+        font-size: 0.8rem;
+    }
+    
+    .transform-box {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 200px;
+    }
+}

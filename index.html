@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Animation Experience</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title animate-fade-in">Interactive Animation Experience</h1>
+            <p class="subtitle">Combining CSS3 Animations with JavaScript Functions</p>
+        </header>
+
+        <!-- Part 1: CSS3 Animations -->
+        <section class="section" id="part1">
+            <h2 class="section-title">🎨✨ Part 1: CSS3 Transitions & Animations</h2>
+            
+            <div class="animation-demo">
+                <h3>Button Hover Effects</h3>
+                <div class="button-group">
+                    <button class="btn btn-glow">Glow Effect</button>
+                    <button class="btn btn-bounce">Bounce Effect</button>
+                    <button class="btn btn-slide">Slide Effect</button>
+                    <button class="btn btn-rotate">Rotate Effect</button>
+                </div>
+            </div>
+
+            <div class="animation-demo">
+                <h3>Continuous Animations</h3>
+                <div class="continuous-animations">
+                    <div class="pulse-box"></div>
+                    <div class="slide-box"></div>
+                    <div class="rotate-box"></div>
+                    <div class="color-box"></div>
+                </div>
+            </div>
+
+            <div class="animation-demo">
+                <h3>Transform Animations</h3>
+                <div class="transform-container">
+                    <div class="transform-box scale-box">Scale</div>
+                    <div class="transform-box skew-box">Skew</div>
+                    <div class="transform-box translate-box">Translate</div>
+                    <div class="transform-box rotate3d-box">3D Rotate</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 2: JavaScript Functions -->
+        <section class="section" id="part2">
+            <h2 class="section-title">📚✨ Part 2: JavaScript Functions</h2>
+            
+            <div class="function-demo">
+                <h3>Function Scope Demonstration</h3>
+                <div class="scope-container">
+                    <button id="scope-demo" class="btn">Run Scope Demo</button>
+                    <div id="scope-output" class="output"></div>
+                </div>
+            </div>
+
+            <div class="function-demo">
+                <h3>Parameter & Return Value Functions</h3>
+                <div class="input-group">
+                    <input type="number" id="num1" placeholder="Enter first number" value="10">
+                    <input type="number" id="num2" placeholder="Enter second number" value="5">
+                </div>
+                <div class="button-group">
+                    <button id="calculate-sum" class="btn">Calculate Sum</button>
+                    <button id="calculate-product" class="btn">Calculate Product</button>
+                    <button id="calculate-power" class="btn">Calculate Power</button>
+                </div>
+                <div id="calculation-output" class="output"></div>
+            </div>
+
+            <div class="function-demo">
+                <h3>String Manipulation Functions</h3>
+                <input type="text" id="text-input" placeholder="Enter some text" value="Hello World!">
+                <div class="button-group">
+                    <button id="reverse-text" class="btn">Reverse Text</button>
+                    <button id="count-chars" class="btn">Count Characters</button>
+                    <button id="toggle-case" class="btn">Toggle Case</button>
+                </div>
+                <div id="text-output" class="output"></div>
+            </div>
+        </section>
+
+        <!-- Part 3: Combined CSS & JavaScript -->
+        <section class="section" id="part3">
+            <h2 class="section-title">🎨🎬 Part 3: CSS + JavaScript Integration</h2>
+            
+            <div class="integration-demo">
+                <h3>Animation Controller</h3>
+                <div class="animation-box" id="controlled-box"></div>
+                <div class="button-group">
+                    <button id="start-animation" class="btn">Start Animation</button>
+                    <button id="stop-animation" class="btn">Stop Animation</button>
+                    <button id="reset-animation" class="btn">Reset Animation</button>
+                </div>
+            </div>
+
+            <div class="integration-demo">
+                <h3>Card Flip Animation</h3>
+                <div class="card-container">
+                    <div class="card" id="flip-card">
+                        <div class="card-front">
+                            <h4>Front Side</h4>
+                            <p>Click to flip!</p>
+                        </div>
+                        <div class="card-back">
+                            <h4>Back Side</h4>
+                            <p>You flipped me!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button id="flip-card-btn" class="btn">Flip Card</button>
+                </div>
+            </div>
+
+            <div class="integration-demo">
+                <h3>Modal Popup with Animation</h3>
+                <button id="open-modal" class="btn">Open Modal</button>
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Animated Modal</h3>
+                        <p>This modal appears with a smooth animation!</p>
+                        <button id="close-modal" class="btn">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="integration-demo">
+                <h3>Progress Loader</h3>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button id="start-loading" class="btn">Start Loading</button>
+                    <button id="reset-loading" class="btn">Reset Loading</button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Interactive Animation Experience - CSS3 & JavaScript Integration</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
